@@ -9,6 +9,7 @@
     "ecmaVersion": 12,
     "sourceType": "module"
   },
+  "ignorePatterns": ["src/components/**/*"],
   "rules": {
     "quotes": ["error", "single"],
     "semi": ["error", "always"],
