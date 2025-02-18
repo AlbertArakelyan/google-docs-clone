@@ -64,8 +64,8 @@ export const Toolbar = () => {
           const current = editor?.view.dom.getAttribute('spellcheck');
           editor?.view.dom.setAttribute('spellcheck', current === 'false' ? 'true' : 'false');
         },
-      }
-    ]
+      },
+    ],
   ];
 
   return (
