@@ -1,6 +1,6 @@
 'use client';
 
-import { LucideIcon, PrinterIcon, Redo2Icon, Undo2Icon } from 'lucide-react';
+import { LucideIcon, PrinterIcon, Redo2Icon, SpellCheckIcon, Undo2Icon } from 'lucide-react';
 
 import { useEditorStore } from '@/store/use-editor-store';
 
@@ -56,6 +56,14 @@ export const Toolbar = () => {
         label: 'Print',
         icon: PrinterIcon,
         onClick: () => window.print(),
+      },
+      {
+        label: 'Spell Check',
+        icon: SpellCheckIcon,
+        onClick: () => {
+          const current = editor?.view.dom.getAttribute('spellcheck');
+          editor?.view.dom.setAttribute('spellcheck', current === 'false' ? 'true' : 'false');
+        },
       }
     ]
   ];
