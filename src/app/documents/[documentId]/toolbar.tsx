@@ -307,6 +307,9 @@ export const Toolbar = () => {
         isActive: editor?.isActive('underline'),
         onClick: () => editor?.chain().focus().toggleUnderline().run(),
       },
+      
+    ],
+    [
       {
         label: 'Comment',
         icon: MessageSquarePlusIcon,
@@ -325,7 +328,6 @@ export const Toolbar = () => {
         onClick: () => editor?.chain().focus().unsetAllMarks().run(),
       },
     ],
-    [],
   ];
 
   return (
