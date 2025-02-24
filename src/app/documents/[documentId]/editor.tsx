@@ -11,6 +11,7 @@ import TableRow from '@tiptap/extension-table-row';
 import Underline from '@tiptap/extension-underline';
 import FontFamily from '@tiptap/extension-font-family';
 import TextStyle from '@tiptap/extension-text-style';
+import TextAlign from '@tiptap/extension-text-align'
 import { Color } from '@tiptap/extension-color';
 import Highlight from '@tiptap/extension-highlight';
 import Link from '@tiptap/extension-link';
@@ -66,6 +67,9 @@ export const Editor = () => {
       Underline,
       FontFamily,
       TextStyle,
+      TextAlign.configure({
+        types: ['heading', 'paragraph'],
+      }),
       Color,
       Highlight.configure({
         multicolor: true,
