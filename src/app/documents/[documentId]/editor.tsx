@@ -11,12 +11,14 @@ import TableRow from '@tiptap/extension-table-row';
 import Underline from '@tiptap/extension-underline';
 import FontFamily from '@tiptap/extension-font-family';
 import TextStyle from '@tiptap/extension-text-style';
-import TextAlign from '@tiptap/extension-text-align'
+import TextAlign from '@tiptap/extension-text-align';
 import { Color } from '@tiptap/extension-color';
 import Highlight from '@tiptap/extension-highlight';
 import Link from '@tiptap/extension-link';
 import TipTapImage from '@tiptap/extension-image';
 import ImageResize from 'tiptap-extension-resize-image';
+
+import { FontSizeExtension } from '@/extensions/font-size';
 
 import { useEditorStore } from '@/store/use-editor-store';
 
@@ -81,6 +83,7 @@ export const Editor = () => {
       }),
       TipTapImage,
       ImageResize,
+      FontSizeExtension,
     ],
     content: `
       <p>Hello world! 👋</p>
