@@ -19,6 +19,7 @@ import TipTapImage from '@tiptap/extension-image';
 import ImageResize from 'tiptap-extension-resize-image';
 
 import { FontSizeExtension } from '@/extensions/font-size';
+import { LineHeightExtension } from '@/extensions/line-height';
 
 import { useEditorStore } from '@/store/use-editor-store';
 
@@ -84,6 +85,7 @@ export const Editor = () => {
       TipTapImage,
       ImageResize,
       FontSizeExtension,
+      LineHeightExtension,
     ],
     content: `
       <p>Hello world! 👋</p>

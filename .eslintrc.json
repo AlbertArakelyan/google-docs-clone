@@ -21,9 +21,15 @@
     "key-spacing": ["error", { "beforeColon": false, "afterColon": true }],
     "space-infix-ops": ["error", { "int32Hint": false }],
     "space-before-blocks": ["error", "always"],
-    "space-before-function-paren": ["error", "always"],
     "space-in-parens": ["error", "never"],
-    "keyword-spacing": ["error", { "before": true, "after": true }]
+    "keyword-spacing": ["error", { "before": true, "after": true }],
+    "eol-last": ["error", "always"],
+    "comma-dangle": ["error", "always-multiline"],
+    "arrow-parens": ["error", "always"]
+    // "no-empty-function": ["error"],
+    // "no-empty": ["error", { "allowEmptyCatch": false }],
+    // "array-bracket-spacing": ["error", "never"],
+    // "object-curly-newline": ["error", { "consistent": true }]
   }
 }
 
