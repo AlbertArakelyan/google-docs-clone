@@ -29,13 +29,30 @@ export const Navbar = () => {
           <div className="flex ">
             <Menubar className="border-none bg-transparent shadow-none h-auto p-0">
               <MenubarMenu>
-                <MenubarTrigger>File</MenubarTrigger>
+                <MenubarTrigger className="text-sm font-normal py-0.5 px-[7px] rounded-sm hover:bg-muted h-auto">
+                  File
+                </MenubarTrigger>
                 <MenubarContent>
                   <MenubarItem>
                     <FileIcon className="size-4 mr-2" />
                     Save
                   </MenubarItem>
                 </MenubarContent>
+              </MenubarMenu>
+              <MenubarMenu>
+                <MenubarTrigger className="text-sm font-normal py-0.5 px-[7px] rounded-sm hover:bg-muted h-auto">
+                  Edit
+                </MenubarTrigger>
+              </MenubarMenu>
+              <MenubarMenu>
+                <MenubarTrigger className="text-sm font-normal py-0.5 px-[7px] rounded-sm hover:bg-muted h-auto">
+                  Insert
+                </MenubarTrigger>
+              </MenubarMenu>
+              <MenubarMenu>
+                <MenubarTrigger className="text-sm font-normal py-0.5 px-[7px] rounded-sm hover:bg-muted h-auto">
+                  Format
+                </MenubarTrigger>
               </MenubarMenu>
             </Menubar>
           </div>
