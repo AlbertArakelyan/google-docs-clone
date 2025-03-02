@@ -1,6 +1,9 @@
+'use client';
+
 import Image from 'next/image';
 import Link from 'next/link';
-import { FileIcon } from 'lucide-react';
+import { FileIcon, FileJsonIcon, FilePenIcon, FilePlusIcon, FileTextIcon, GlobeIcon, PrinterIcon, TrashIcon } from 'lucide-react';
+import { BsFilePdf } from 'react-icons/bs';
 
 import {
   Menubar,
@@ -32,10 +35,49 @@ export const Navbar = () => {
                 <MenubarTrigger className="text-sm font-normal py-0.5 px-[7px] rounded-sm hover:bg-muted h-auto">
                   File
                 </MenubarTrigger>
-                <MenubarContent>
+                <MenubarContent className="print:hidden">
+                  <MenubarSub>
+                    <MenubarSubTrigger>
+                      <FileIcon className="size-4 mr-2" />
+                      Save
+                    </MenubarSubTrigger>
+                    <MenubarSubContent>
+                      <MenubarItem>
+                        <FileJsonIcon className="size-4 mr-2" />
+                        JSON
+                      </MenubarItem>
+                      <MenubarItem>
+                        <GlobeIcon className="size-4 mr-2" />
+                        HTML
+                      </MenubarItem>
+                      <MenubarItem>
+                        <BsFilePdf className="size-4 mr-2" />
+                        PDF
+                      </MenubarItem>
+                      <MenubarItem>
+                        <FileTextIcon className="size-4 mr-2" />
+                        Text
+                      </MenubarItem>
+                      {/* Try to add Markdown */}
+                    </MenubarSubContent>
+                  </MenubarSub>
                   <MenubarItem>
-                    <FileIcon className="size-4 mr-2" />
-                    Save
+                    <FilePlusIcon className="size-4 mr-2" />
+                    New Document
+                  </MenubarItem>
+                  <MenubarSeparator />
+                  <MenubarItem>
+                    <FilePenIcon className="size-4 mr-2" />
+                    Rename
+                  </MenubarItem>
+                  <MenubarItem>
+                    <TrashIcon className="size-4 mr-2" />
+                    Remove
+                  </MenubarItem>
+                  <MenubarSeparator />
+                  <MenubarItem onClick={() => window.print()}>
+                    <PrinterIcon className="size-4 mr-2" />
+                    Print <MenubarShortcut>⌘P</MenubarShortcut>
                   </MenubarItem>
                 </MenubarContent>
               </MenubarMenu>
