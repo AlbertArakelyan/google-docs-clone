@@ -2,7 +2,7 @@
 
 import Image from 'next/image';
 import Link from 'next/link';
-import { FileIcon, FileJsonIcon, FilePenIcon, FilePlusIcon, FileTextIcon, GlobeIcon, PrinterIcon, Redo2Icon, TrashIcon, Undo2Icon } from 'lucide-react';
+import { BoldIcon, FileIcon, FileJsonIcon, FilePenIcon, FilePlusIcon, FileTextIcon, GlobeIcon, ItalicIcon, Menu, PrinterIcon, Redo2Icon, RemoveFormattingIcon, StrikethroughIcon, TextIcon, TrashIcon, UnderlineIcon, Undo2Icon } from 'lucide-react';
 import { BsFilePdf } from 'react-icons/bs';
 
 import {
@@ -124,6 +124,36 @@ export const Navbar = () => {
                 <MenubarTrigger className="text-sm font-normal py-0.5 px-[7px] rounded-sm hover:bg-muted h-auto">
                   Format
                 </MenubarTrigger>
+                <MenubarContent>
+                  <MenubarSub>
+                    <MenubarSubTrigger>
+                      <TextIcon className="size-4 mr-2" />
+                      Text
+                    </MenubarSubTrigger>
+                    <MenubarSubContent>
+                      <MenubarItem>
+                        <BoldIcon className="size-4 mr-2" />
+                        Bold <MenubarShortcut>⌘B</MenubarShortcut>
+                      </MenubarItem>
+                      <MenubarItem>
+                        <ItalicIcon className="size-4 mr-2" />
+                        Italic <MenubarShortcut>⌘I</MenubarShortcut>
+                      </MenubarItem>
+                      <MenubarItem>
+                        <UnderlineIcon className="size-4 mr-2" />
+                        Underline <MenubarShortcut>⌘U</MenubarShortcut>
+                      </MenubarItem>
+                      <MenubarItem>
+                        <StrikethroughIcon className="size-4 mr-2" />
+                        Strikethrough <MenubarShortcut>⌘S</MenubarShortcut>
+                      </MenubarItem>
+                    </MenubarSubContent>
+                  </MenubarSub>
+                  <MenubarItem>
+                    <RemoveFormattingIcon className="size-4 mr-2" />
+                    Clear Formatting
+                  </MenubarItem>
+                </MenubarContent>
               </MenubarMenu>
             </Menubar>
           </div>
