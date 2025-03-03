@@ -145,7 +145,7 @@ export const Navbar = () => {
                       </MenubarItem>
                       <MenubarItem>
                         <StrikethroughIcon className="size-4 mr-2" />
-                        Strikethrough <MenubarShortcut>⌘S</MenubarShortcut>
+                        Strikethrough&nbsp;&nbsp; <MenubarShortcut>⌘S</MenubarShortcut>
                       </MenubarItem>
                     </MenubarSubContent>
                   </MenubarSub>
