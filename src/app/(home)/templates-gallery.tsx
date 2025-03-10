@@ -52,6 +52,8 @@ export const TemplatesGallery = () => {
               </CarouselItem>
             ))}
           </CarouselContent>
+          <CarouselNext />
+          <CarouselPrevious />
         </Carousel>
       </div>
     </div>
