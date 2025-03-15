@@ -30,7 +30,7 @@ export const get = query({
   },
 });
 
-export const removeById = () => mutation({
+export const removeById = mutation({
   args: { id: v.id('documents') },
   handler: async (ctx, args) => {
     const user = await ctx.auth.getUserIdentity();
