@@ -17,6 +17,12 @@ import Highlight from '@tiptap/extension-highlight';
 import Link from '@tiptap/extension-link';
 import TipTapImage from '@tiptap/extension-image';
 import ImageResize from 'tiptap-extension-resize-image';
+import CodeBlockLowlight from '@tiptap/extension-code-block-lowlight';
+import { all, createLowlight } from 'lowlight';
+import css from 'highlight.js/lib/languages/css';
+import js from 'highlight.js/lib/languages/javascript';
+import ts from 'highlight.js/lib/languages/typescript';
+import html from 'highlight.js/lib/languages/xml';
 
 import { FontSizeExtension } from '@/extensions/font-size';
 import { LineHeightExtension } from '@/extensions/line-height';
@@ -24,6 +30,13 @@ import { LineHeightExtension } from '@/extensions/line-height';
 import { Ruler } from './ruler';
 
 import { useEditorStore } from '@/store/use-editor-store';
+
+const lowlight = createLowlight(all);
+
+lowlight.register('html', html);
+lowlight.register('css', css);
+lowlight.register('js', js);
+lowlight.register('ts', ts);
 
 export const Editor = () => {
   const { setEditor } = useEditorStore();
@@ -89,6 +102,9 @@ export const Editor = () => {
       ImageResize,
       FontSizeExtension,
       LineHeightExtension,
+      CodeBlockLowlight.configure({
+        lowlight,
+      }),
     ],
   });
 

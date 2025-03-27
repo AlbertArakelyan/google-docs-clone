@@ -71,6 +71,22 @@ export const Navbar = () => {
     onDownload(blob, 'document.html'); // TODO: use document name
   };
 
+  const onSaveRichHtml = () => {
+    if (!editor) {
+      return;
+    }
+
+    const content = document.querySelector('.tiptap')?.innerHTML;
+
+    if (content) {
+      const blob = new Blob([content], {
+        type: 'text/html',
+      });
+
+      onDownload(blob, 'document2.html');
+    }
+  };
+
   const onSSaveText = () => {
     if (!editor) {
       return;
@@ -113,6 +129,10 @@ export const Navbar = () => {
                       <MenubarItem onClick={onSaveHtml}>
                         <GlobeIcon className="size-4 mr-2" />
                         HTML
+                      </MenubarItem>
+                      <MenubarItem onClick={onSaveRichHtml}>
+                        <GlobeIcon className="size-4 mr-2" />
+                        Rich HTML
                       </MenubarItem>
                       <MenubarItem onClick={() => window.print()}>
                         <BsFilePdf className="size-4 mr-2" />

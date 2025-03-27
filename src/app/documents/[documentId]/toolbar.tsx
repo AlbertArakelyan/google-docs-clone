@@ -9,6 +9,7 @@ import {
   AlignRightIcon,
   BoldIcon,
   ChevronDownIcon,
+  Code2Icon,
   HighlighterIcon,
   ImageIcon,
   ItalicIcon,
@@ -634,7 +635,12 @@ export const Toolbar = () => {
         isActive: editor?.isActive('underline'),
         onClick: () => editor?.chain().focus().toggleUnderline().run(),
       },
-
+      {
+        label: 'Code Block',
+        icon: Code2Icon,
+        isActive: editor?.isActive('codeBlock'),
+        onClick: () => editor?.chain().focus().toggleCodeBlock().run(),
+      },
     ],
     [
       {
